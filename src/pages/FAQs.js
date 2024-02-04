@@ -66,12 +66,11 @@ export default function FAQs() {
           flexDirection: "column",
           paddingTop: "5%",
           paddingBottom: "5%",
+          marginBottom: "5%",
+          background: `linear-gradient(0deg, #0a0a0a 0%,#4743ff  100%)`,
         }}
       >
-        <p className="hero">
-          What Are You <br />
-          Looking For:
-        </p>
+        <p className="hero">How Can We Help:</p>
         <input
           className="faqs-search"
           id="faqs"

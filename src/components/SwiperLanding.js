@@ -13,6 +13,10 @@ import "../styles/swiperLanding.css";
 // import required modules
 import { EffectFade, Pagination, Navigation } from "swiper/modules";
 
+import nyc from "../assets/NYC Skyline.jpg";
+import florida from "../assets/florida.avif";
+import colorado from "../assets/colorado.jpg";
+
 export default function SwiperLanding() {
   return (
     <>
@@ -41,7 +45,7 @@ export default function SwiperLanding() {
           >
             NEW YORK
           </p>
-          <img src="http://tinyurl.com/ysk44ncy" alt="" />
+          <img src={nyc} alt="" />
         </SwiperSlide>
         <SwiperSlide>
           <p
@@ -52,7 +56,7 @@ export default function SwiperLanding() {
           >
             FLORIDA
           </p>
-          <img src="http://tinyurl.com/3vustjj7" alt="" />
+          <img src={florida} alt="" />
         </SwiperSlide>
         <SwiperSlide>
           <p
@@ -63,7 +67,7 @@ export default function SwiperLanding() {
           >
             COLORADO
           </p>
-          <img src="http://tinyurl.com/2p9akhka" alt="" />
+          <img src={colorado} alt="" />
         </SwiperSlide>
       </Swiper>
     </>

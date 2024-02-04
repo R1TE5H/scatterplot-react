@@ -12,14 +12,14 @@ export default function Accordion({ title, content }) {
           width: "50%",
           maxWidth: "1000px",
           border: "2px solid white",
-          marginBottom: "50px",
+          marginBottom: "1vw",
           padding: "0.5%",
           borderRadius: "20px",
         }}
       >
         <div
           className="subHero"
-          style={{ color: "#fff", fontSize: `calc(14px + 1vw)` }}
+          style={{ color: "#fff", fontSize: `calc(5px + 2vw)` }}
           onClick={() => {
             if (isActive) {
               setIsActive(false);
