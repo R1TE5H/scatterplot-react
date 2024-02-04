@@ -11,9 +11,9 @@ import "swiper/css/effect-fade";
 import "../styles/swiperLanding.css";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
-export default function SwiperLanding() {
+export default function StepsCard() {
   const steps = [
     {
       hP1: "Partners List",
@@ -48,7 +48,8 @@ export default function SwiperLanding() {
           dynamicBullets: true,
         }}
         loop={true}
-        modules={[Pagination]}
+        navigation={true}
+        modules={[Pagination, Navigation]}
         className="mySwiper swiper-container"
       >
         {steps.map((step) => {
