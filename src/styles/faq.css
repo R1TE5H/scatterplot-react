@@ -1,0 +1,14 @@
+.faqs-search {
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid white;
+  border-radius: 0px;
+  font-size: 72px;
+  color: #b8b8b8;
+  width: 60%;
+  height: fit-content;
+}
+
+.faqs-search:focus {
+  outline: 0;
+}

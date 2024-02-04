@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: inter;
+}
+
+button {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  height: 55px;
+  color: #fff;
+  font-family: inter;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 40px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 10px;
+  height: 55px;
+  padding: 0 40px;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  transition: 0.5s;
+}
+.action:hover {
+  border-color: #4743ff;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero {
+  font-size: calc(64px + 2vw);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.subHero {
+  font-size: calc(24px + 1vw);
+  font-weight: bold;
+  color: #b8b8b8;
+}
+.socialMedia {
+  color: #fff;
+}
+.socialMedia:hover {
+  color: #4743ff;
+  transform: scale(1.1);
+}
+
+.underWait {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.link {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: #fff;
+  font-family: inter;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 40px;
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
