@@ -23,6 +23,9 @@
   font-size: calc(1px + 1.5vw);
 }
 
+.accordion-content {
+  animation: fadeIn 1s;
+}
 .accordion-btn {
   margin-right: 10%;
   animation: fadeIn 0.5s;

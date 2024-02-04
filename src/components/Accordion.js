@@ -36,9 +36,14 @@ export default function Accordion({ title, content, quickAns }) {
               {quickAns}
               <br />
             </span>
-            <span className="accordion-sub" style={{ color: "white" }}>
-              {isActive && content}
-            </span>
+            {isActive && (
+              <span
+                className="accordion-sub accordion-content"
+                style={{ color: "white" }}
+              >
+                {content}
+              </span>
+            )}
           </p>
         </div>
         {isActive ? (
