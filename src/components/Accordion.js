@@ -1,37 +1,55 @@
 import React, { useState } from "react";
+import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 
-export default function Accordion({ title, content }) {
+import "../styles/main.css";
+import "../styles/faq.css";
+
+export default function Accordion({ title, content, quickAns }) {
   const [isActive, setIsActive] = useState(false);
   return (
     <>
       <div
+        className="btn active accordion"
         style={{
-          textAlign: "left",
           cursor: "pointer",
           minWidth: "200px",
           width: "50%",
-          maxWidth: "1000px",
-          border: "2px solid white",
-          marginBottom: "1vw",
-          padding: "0.5%",
+          textAlign: "left",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
           borderRadius: "20px",
         }}
+        onClick={() => {
+          if (isActive) {
+            setIsActive(false);
+          } else {
+            setIsActive(true);
+          }
+        }}
       >
-        <div
-          className="subHero"
-          style={{ color: "#fff", fontSize: `calc(5px + 2vw)` }}
-          onClick={() => {
-            if (isActive) {
-              setIsActive(false);
-            } else {
-              setIsActive(true);
-            }
-          }}
-        >
-          {title}
+        <div style={{ width: "90%" }}>
+          <p className="accordion">
+            {title}
+            <br />
+            <span className="accordion-sub">
+              {quickAns}
+              <br />
+            </span>
+            <span className="accordion-sub" style={{ color: "white" }}>
+              {isActive && content}
+            </span>
+          </p>
         </div>
-
-        {isActive && <div style={{ color: "white" }}>{content}</div>}
+        {isActive ? (
+          <IoIosArrowDropup className="accordion-btn" size={24} />
+        ) : (
+          <IoIosArrowDropdown
+            className="accordion-btn"
+            size={24}
+            style={{ fill: "white" }}
+          />
+        )}
       </div>
     </>
   );

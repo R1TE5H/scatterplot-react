@@ -24,6 +24,7 @@ button {
 .action:hover {
   border-color: #4743ff;
 }
+
 .link {
   background: transparent;
   border: 2px solid white;
@@ -86,6 +87,7 @@ input {
   transform: translateY(-10px);
   transition: 0.5s;
 }
+
 /* Laptops, Computers, and iPad Airs */
 @media screen and (min-width: 820px) {
   .waitList {

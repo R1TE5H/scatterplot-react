@@ -20,24 +20,28 @@ export default function StepsCard() {
       hp2: "A Property",
       content:
         "After review and approval, our team selects optimal renovations and work with contractors to get estimate costs.",
+      id: 1,
     },
     {
       hP1: "Investors Fund",
       hp2: "The Project",
       content:
         "Investors choose projects they want to invest in and help finance the renovation. Then the contractors get started on transforming the property. ",
+      id: 2,
     },
     {
       hP1: "We Sell The",
       hp2: "Property",
       content:
         "When the renovations are complete, we work with realtors to put the house on the market.",
+      id: 3,
     },
     {
       hP1: "Everyone Gets A",
       hp2: "Share of the Profits",
       content:
         "After paying back the initial investments, all investors are paid a share of the profits based on their contributions.",
+      id: 4,
     },
   ];
 
@@ -63,6 +67,7 @@ export default function StepsCard() {
               style={{
                 backgroundColor: "#212121",
               }}
+              key={step.id}
             >
               <div className="swiper-card">
                 <p className="subHero swiper-head">

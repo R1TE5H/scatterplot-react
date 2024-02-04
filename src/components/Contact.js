@@ -12,7 +12,7 @@ export default function Contact() {
         width: "fit-content",
         height: "110px",
         right: "1%",
-        bottom: "2%",
+        bottom: "3%",
         justifyContent: "space-evenly",
         flexDirection: "column",
       }}

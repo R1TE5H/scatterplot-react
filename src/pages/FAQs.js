@@ -6,19 +6,21 @@ import Accordion from "../components/Accordion";
 export default function FAQs() {
   const [faq, setFaq] = useState("");
   // List of words from their query. If it matches an FAQ's key words the FAQ wil be brought to the top
-  const [filterWords, setFilterWords] = useState([]);
 
   const accordionData = [
     {
-      title: "Can I be a Partner and Investor",
+      title: "Can I be a Partner and Investor?",
+      quickAns: "Yes. Users can be a Partner and Investor",
       content: "content here",
-      keywords: ["Partner", "Investor"],
+      keywords: ["Partners", "Investors"],
       id: 1,
     },
     {
-      title: "jhggkjgkgkj",
-      content: "content here",
-      keywords: ["Partner", "Fees"],
+      title: "When Can I Liquidate?",
+      quickAns: "Users can Liquidate Nearly Anytime",
+      content:
+        "Users can cash out any amount of your assets that are not currently invested in a project at anytime.",
+      keywords: ["Money", "Cash", "When", "Investors", "Partners"],
       id: 4,
     },
     {
@@ -42,13 +44,18 @@ export default function FAQs() {
   ];
 
   const filterFunction = (data) => {
+    const list = faq.split(" ");
+
     for (let element of data.keywords) {
-      for (let word of filterWords) {
-        if (element.toLowerCase() === word.toLowerCase()) {
+      for (let word of list) {
+        if (
+          element.toLowerCase().substring(0, word.length) === word.toLowerCase()
+        ) {
           return (
             <Accordion
               key={data.id}
               title={data.title}
+              quickAns={data.quickAns}
               content={data.content}
             />
           );
@@ -64,8 +71,7 @@ export default function FAQs() {
         className="center"
         style={{
           flexDirection: "column",
-          paddingTop: "5%",
-          paddingBottom: "5%",
+          padding: "1% 5% 5% 5%",
           marginBottom: "5%",
           background: `linear-gradient(0deg, #0a0a0a 0%,#4743ff  100%)`,
         }}
@@ -77,8 +83,6 @@ export default function FAQs() {
           type="search"
           onChange={(e) => {
             setFaq(e.target.value);
-            setFilterWords(faq.split(" "));
-            console.log(filterWords);
           }}
         />
       </div>
@@ -89,18 +93,19 @@ export default function FAQs() {
           flexDirection: "column",
         }}
       >
-        {faq !== ""
+        {faq === ""
           ? accordionData.map((data) => {
-              return filterFunction(data);
-            })
-          : accordionData.map((data) => {
               return (
                 <Accordion
                   key={data.id}
                   title={data.title}
                   content={data.content}
+                  quickAns={data.quickAns}
                 />
               );
+            })
+          : accordionData.map((data) => {
+              return filterFunction(data);
             })}
       </div>
     </>

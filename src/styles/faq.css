@@ -12,3 +12,27 @@
 .faqs-search:focus {
   outline: 0;
 }
+
+.accordion {
+  font-size: calc(5px + 2vw);
+  font-weight: bold;
+  color: #4743ff;
+}
+.accordion-sub {
+  color: #b8b8b8;
+  font-size: calc(1px + 1.5vw);
+}
+
+.accordion-btn {
+  margin-right: 10%;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
