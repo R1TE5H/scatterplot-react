@@ -28,6 +28,7 @@ export default function Landing() {
     <>
       <Contact />
       <div
+        className="top-padding"
         style={{
           background: `linear-gradient(0deg, #0a0a0a 0%,#4743ff  100%)`,
           height: "45vw",
@@ -46,7 +47,7 @@ export default function Landing() {
           Join the Wait List
         </button>
       </div>
-      <div style={{ marginBottom: "15%" }}>
+      <div style={{ marginBottom: "10%" }}>
         <p className="hero center">
           Invest With <br />
           Peace of Mind
@@ -117,7 +118,7 @@ export default function Landing() {
             delivered straight to your inbox.
           </span>
         </p>
-        <form className="center" style={{ gap: "20px" }}>
+        <form className="waitList" style={{ gap: "20px" }}>
           <input
             style={{ fontSize: "20px" }}
             id="wait_list_name"

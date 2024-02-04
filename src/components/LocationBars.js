@@ -75,7 +75,7 @@ export default function LocationBars() {
       className="center"
       style={{
         justifyContent: "center",
-        gap: `calc(40px - 1vw)`,
+        gap: "2vw",
       }}
     >
       {locations.map((element) => (

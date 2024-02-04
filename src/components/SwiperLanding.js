@@ -27,9 +27,9 @@ export default function SwiperLanding() {
         className="mySwiper"
         style={{
           width: "60%",
-          minWidth: "600px",
+          minWidth: "360px",
           height: "30vw",
-          minHeight: "400px",
+          minHeight: "200px",
         }}
       >
         <SwiperSlide>
