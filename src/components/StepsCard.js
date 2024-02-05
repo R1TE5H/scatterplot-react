@@ -54,12 +54,7 @@ export default function StepsCard() {
         loop={true}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper swiper-container"
-        style={{
-          width: "50%",
-          height: "30vw",
-          minHeight: "200px",
-        }}
+        className="mySwiper swiper-container steps-card"
       >
         {steps.map((step) => {
           return (

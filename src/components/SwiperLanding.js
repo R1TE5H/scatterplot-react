@@ -30,7 +30,7 @@ export default function SwiperLanding() {
         modules={[EffectFade, Pagination, Navigation]}
         className="mySwiper"
         style={{
-          width: "60%",
+          width: "80%",
           minWidth: "360px",
           height: "30vw",
           minHeight: "200px",

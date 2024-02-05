@@ -5,7 +5,6 @@ import Accordion from "../components/Accordion";
 
 export default function FAQs() {
   const [faq, setFaq] = useState("");
-  // List of words from their query. If it matches an FAQ's key words the FAQ wil be brought to the top
 
   const accordionData = [
     {
@@ -67,20 +66,11 @@ export default function FAQs() {
   return (
     <>
       <Contact />
-      <div
-        className="center"
-        style={{
-          flexDirection: "column",
-          padding: "1% 5% 5% 5%",
-          marginBottom: "5%",
-          background: `linear-gradient(0deg, #0a0a0a 0%,#4743ff  100%)`,
-        }}
-      >
+      <div className="center faq-header">
         <p className="hero">How Can We Help:</p>
         <input
           className="faqs-search"
           id="faqs"
-          type="search"
           onChange={(e) => {
             setFaq(e.target.value);
           }}

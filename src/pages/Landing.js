@@ -1,20 +1,30 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../styles/landing.css";
 import "../styles/main.css";
 import SwiperLanding from "../components/SwiperLanding";
 import LocationBars from "../components/LocationBars";
 import Contact from "../components/Contact";
 import StepsCard from "../components/StepsCard";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Landing() {
   const [formData, setFormData] = useState({ name: "", email: "" });
-  const [waitSubmit, setWaitSubmit] = useState(false);
 
   const handleWaitList = (e) => {
     e.preventDefault();
     console.log(formData);
-    setWaitSubmit(true);
+    toast.success(`Welcome to Scatterplot, ${formData.name}`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   };
 
   const waitList = useRef(null);
@@ -27,19 +37,26 @@ export default function Landing() {
   return (
     <>
       <Contact />
-      <div
-        className="top-padding"
-        style={{
-          background: `linear-gradient(0deg, #0a0a0a 0%,#4743ff  100%)`,
-          height: "45vw",
-          paddingTop: "5%",
-          minHeight: "600px",
-          paddingLeft: "10%",
-        }}
-      >
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      {/* Same as */}
+      <ToastContainer />
+      <div className="top-padding gradient-bg">
         <p className="hero">
           Build the World <br />
-          <span style={{ fontSize: `calc(20px + 1vw)`, fontWeight: "bold" }}>
+          <span
+            style={{ fontSize: "clamp(20px, 4vw, 36px)", fontWeight: "bold" }}
+          >
             Start House Flipping and Cash in on the <br /> Real Estate Market
           </span>
         </p>
@@ -47,7 +64,7 @@ export default function Landing() {
           Join the Wait List
         </button>
       </div>
-      <div style={{ marginBottom: "10%" }}>
+      <div style={{ marginBottom: "10%", padding: "0px 10%" }}>
         <p className="hero center">
           Invest With <br />
           Peace of Mind
@@ -109,18 +126,18 @@ export default function Landing() {
       </div>
 
       <LocationBars />
-      <div ref={waitList} style={{ marginBottom: "15%" }}>
+      <div ref={waitList} style={{ marginBottom: "7%", padding: "0px 10%" }}>
         <p className="hero center">
           Join Us
           <br />
           <span className="subHero ">
-            Join our Wait List. Get the latest listings and <br /> biggest news
+            Join our Wait List. Get the latest listings and biggest news
             delivered straight to your inbox.
           </span>
         </p>
         <form className="waitList" style={{ gap: "20px" }}>
           <input
-            style={{ fontSize: "20px" }}
+            className="wait-list-input"
             id="wait_list_name"
             placeholder="Enter Your Name"
             required
@@ -130,7 +147,7 @@ export default function Landing() {
             }}
           />
           <input
-            style={{ fontSize: "20px" }}
+            className="wait-list-input"
             id="wait_list_email"
             placeholder="Enter Your Email"
             required
@@ -143,9 +160,6 @@ export default function Landing() {
             Join
           </button>
         </form>
-        {waitSubmit && (
-          <p className="hero underWait center">{`Welcome, ${formData.name}`}</p>
-        )}
       </div>
     </>
   );
