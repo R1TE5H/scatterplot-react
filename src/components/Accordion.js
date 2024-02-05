@@ -12,12 +12,12 @@ export default function Accordion({ title, content, quickAns }) {
         className="btn active accordion"
         style={{
           cursor: "pointer",
-          minWidth: "200px",
+          minWidth: "300px",
           width: "50%",
           textAlign: "left",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           borderRadius: "20px",
         }}
         onClick={() => {
