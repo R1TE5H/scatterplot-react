@@ -30,8 +30,8 @@
 }
 
 .swiper-card {
-  padding: 0% 10%;
-  text-align: left;
+  padding: 0% 15%;
+  text-align: center;
 }
 
 .swiper-container {
@@ -48,4 +48,11 @@
     height: 30vw;
     min-height: 200px;
   }
+}
+
+.swiper-button-prev {
+  color: #4743ff;
+}
+.swiper-button-next {
+  color: #4743ff;
 }

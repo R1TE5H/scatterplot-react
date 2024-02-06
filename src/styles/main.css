@@ -12,9 +12,10 @@ button {
   color: #fff;
   font-family: inter;
   font-weight: bold;
-  font-size: 18px;
-  padding: 0 40px;
+  font-size: clamp(16px, 2vw, 18px);
+  padding: 0 clamp(20px, 2vw, 40px);
   width: fit-content;
+  min-width: 15%;
   cursor: pointer;
 }
 .btn:hover {
@@ -32,8 +33,9 @@ button {
   color: #fff;
   font-family: inter;
   font-weight: bold;
-  font-size: 18px;
-  padding: 15px 40px;
+  font-size: clamp(16px, 2vw, 18px);
+  padding: 15px clamp(20px, 3vw, 40px);
+
   width: fit-content;
   cursor: pointer;
   text-decoration: none;
@@ -51,6 +53,11 @@ button {
   color: #b8b8b8;
 }
 
+.subHead {
+  font-size: clamp(20px, 4vw, 36px);
+  font-weight: bold;
+}
+
 .center {
   display: flex;
   align-items: center;
@@ -64,4 +71,9 @@ button {
 .socialMedia:hover {
   color: #4743ff;
   transform: scale(1.1);
+}
+
+.section {
+  margin-bottom: clamp(100px, 15%, 300px);
+  padding: 0px 10%;
 }

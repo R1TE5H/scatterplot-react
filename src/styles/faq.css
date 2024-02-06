@@ -9,11 +9,12 @@
 }
 .accordion-sub {
   color: #b8b8b8;
-  font-size: clamp(12px, 2vw, 28px);
+  font-size: clamp(12px, 1.5vw, 28px);
 }
 
 .accordion-content {
   animation: fadeIn 1s;
+  font-size: clamp(12px, 1.5vw, 28px);
 }
 .accordion-btn {
   margin-right: 10%;

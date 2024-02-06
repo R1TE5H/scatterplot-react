@@ -15,6 +15,7 @@ export default function Contact() {
         bottom: "3%",
         justifyContent: "space-evenly",
         flexDirection: "column",
+        zIndex: "10",
       }}
     >
       <a href="https://twitter.com/?lang=en" target="_blank">
