@@ -89,7 +89,7 @@ export default function Landing() {
           Minimize <br />
           The Risks
           <br />
-          <span className="subHero">
+          <span className="subHero right-text-landing">
             Get in on the action without spending all your savings. Start
             investing for as little as $100.
           </span>

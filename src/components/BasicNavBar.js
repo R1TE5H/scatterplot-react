@@ -13,6 +13,7 @@ export default function BasicNavBar() {
         alignContent: "center",
         justifyContent: "space-between",
         zIndex: "10",
+        transition: "top 0.3s",
       }}
     >
       <div>
