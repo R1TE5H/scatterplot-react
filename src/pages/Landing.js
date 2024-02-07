@@ -41,8 +41,11 @@ export default function Landing() {
       <div className="top-padding gradient-bg">
         <p className="hero">
           Build the World <br />
-          <span className="subHead">
-            Start House Flipping and Cash in on the <br /> Real Estate Market
+          <span
+            className="subHead"
+            style={{ width: "70%", minWidth: "270px", maxWidth: "600px" }}
+          >
+            Start House Flipping and Cash in on the Real Estate Market
           </span>
         </p>
         <button className="btn" onClick={() => toWaitList("Hero Button")}>
